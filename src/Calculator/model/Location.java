@@ -1,4 +1,4 @@
-package Calculator;
+package Calculator.model;
 
 public class Location {
     private final String name;
