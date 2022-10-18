@@ -25,7 +25,7 @@ public class CalculatorSolution2 {
 
     // read data from json file
     private void setup() {
-        JsonReader reader = new JsonReader();
+        JsonReader reader = JsonReader.getInstance();
         Interchanges data = reader.readJson();
         ArrayList<Location> myLocations = data.getMyLocations();
         this.myLocationDic = data.getMyLocationDic();

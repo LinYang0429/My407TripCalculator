@@ -19,7 +19,16 @@ import java.util.Map;
 
 public class JsonReader {
 
-    public JsonReader() {}
+    private JsonReader() {
+    }
+
+    private static class JsonReaderSingleton {
+        private static final JsonReader INSTANCE = new JsonReader();
+    }
+
+    public static JsonReader getInstance() {
+        return JsonReaderSingleton.INSTANCE;
+    }
 
     public Interchanges readJson() {
         ArrayList<Location> myLocations = new ArrayList<>();
